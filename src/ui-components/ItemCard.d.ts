@@ -5,7 +5,6 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Home } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { BadgeProps, FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -20,7 +19,7 @@ export declare type ItemCardOverridesProps = {
 } & EscapeHatchProps;
 export declare type ItemCardProps = React.PropsWithChildren<Partial<FlexProps> & {
     items?: String;
-    home?: Home;
+    home?: any;
 } & {
     overrides?: ItemCardOverridesProps | undefined | null;
 }>;
