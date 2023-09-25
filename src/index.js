@@ -15,6 +15,9 @@ import {
   ItemCardCollection 
  } from './ui-components';
 
+import { withAuthenticator } from "@aws-amplify/ui-react"; //ここを追加
+
+
 Amplify.configure(awsconfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

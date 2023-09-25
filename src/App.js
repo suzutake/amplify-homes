@@ -3,6 +3,8 @@ import './App.css';
 import {
   ItemCardCollection 
  } from './ui-components';
+import { withAuthenticator } from "@aws-amplify/ui-react"; //ここを追加
+
 
 function App() {
   return (
@@ -21,10 +23,12 @@ function App() {
         >
           Learn React
         </a>
+
+
       </header>
       
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App); //ここを変更
