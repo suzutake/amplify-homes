@@ -100,3 +100,5 @@ amplify console auth
 
 ## install ui-react 
 npm install aws-amplify @aws-amplify/ui-react
+
+## tableのschemaはamplify/backend/api/amplify1st/schema.graphqlに記載する
