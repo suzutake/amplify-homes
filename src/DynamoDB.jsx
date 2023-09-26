@@ -1,11 +1,12 @@
 import { API, GRAPHQL_AUTH_MODE } from "@aws-amplify/api";
 import { useEffect, useState } from "react";
 
-import { createHome } from "../graphql/mutations";
-import { listHomes } from "../graphql/queries";
+import { createHome } from "./graphql/mutations";
+import { listHomes } from "./graphql/queries";
 
 export function DynamoDB() {
   const [homes, setHomes] = useState([]);
+  const [id, setID] = useState("");
   const [address, setAddress] = useState("");
   const [price, setPrice] = useState("");
 
@@ -24,6 +25,10 @@ export function DynamoDB() {
       console.log("error fetching books...", err);
     }
   }
+
+  const handleIDChange = (event) => {
+    setID(event.target.value);
+  };
 
   const handleAddressChange = (event) => {
     setAddress(event.target.value);
@@ -57,6 +62,11 @@ export function DynamoDB() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+      <label>
+          ID:
+          <input type="text" value={id} onChange={handleIDChange} />
+        </label>
+        <br />
         <label>
           address:
           <input type="text" value={address} onChange={handleAddressChange} />

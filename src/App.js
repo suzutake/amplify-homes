@@ -4,6 +4,7 @@ import {
   ItemCardCollection 
  } from './ui-components';
 import { withAuthenticator } from "@aws-amplify/ui-react"; //ここを追加
+import { DynamoDB } from "./DynamoDB"; //ここを追加
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <ItemCardCollection />
+         {/* 下記を変更 */}
+         <DynamoDB />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
